@@ -14,17 +14,6 @@
  #define SYMBOL  3
 
 / {
-
-        behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-             };
-        };
         conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -32,7 +21,7 @@
             then-layer = <3>;
             };
         };
-
+        
         keymap {
                 compatible = "zmk,keymap";
 
