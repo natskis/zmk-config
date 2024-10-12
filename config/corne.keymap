@@ -46,7 +46,7 @@
    &kp TAB   &kp ESC  &trans  &kp TAB  &kp KP_LPAR  &kp KP_RPAR      &kp PG_UP &kp PG_DN &kp HOME  &kp END   &kp PSCRN &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI &trans
    &kp LSHFT &kp PIPE &trans  &trans   &trans       &trans           &kp MINUS &kp EQUAL &kp BSLH  &kp LBKT  &kp RBKT  &kp TILDE
-                &kp ENTER &kp LSHIFT &mo LOWER      &mo RAISE &kp SPACE &kp DELETEz
+                &kp ENTER &kp LSHIFT &mo LOWER      &mo RAISE &kp SPACE &kp DELETE
                         >;
                 };
 
@@ -75,9 +75,9 @@
    &kp LCTRL &trans     &trans       &trans         &trans     &bt BT_CLR   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4
    &kp LSHFT &kp C_MUTE &kp C_VOL_DN &kp K_VOL_UP   &kp C_RW   &kp C_FF     &kp F11     &kp F12      &kp LBRC     &kp RBRC      &kp PIPE        &kp TILDE
                     &kp ENTER &kp LSHIFT &mo LOWER     &mo RAISE &kp SPACE &kp DELETE
-                 >;
+                        >;
+                };
         };
- };
 };
 
 
