@@ -14,11 +14,6 @@
 #define RAISE   2
 #define SYMBOL  3
 
-
-
-
-
-
 / {
         behaviors {
                 _ht: left_positional_hold_tap {
