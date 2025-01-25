@@ -82,8 +82,8 @@
         // | SHFT |MUTE |VOL D|VOL U|RWND |NEXT |   | F11 | F12 | "|" |  [  |  ]  |  ~   |
         //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-        &trans  &kp GRAVE  &kp C_RW     &kp C_FF       &kp C_STOP &kp C_PLAY       &bt BT_CLR    &bt BT_CLR_ALL &bt BT_NXT   &bt BT_PRV    &kp BT_DISC   &trans
-        &trans  &ext_power EP_OFF &ext_power EP_ON &kp LSHIFT &trans           &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4  &trans
+        &trans  &kp GRAVE  &kp C_RW     &kp C_FF       &kp C_STOP &kp C_PLAY &bt BT_CLR    &bt BT_CLR_ALL &bt BT_NXT   &bt BT_PRV    &kp BT_DISC   &trans
+        &trans  &ext_power EP_OFF &ext_power EP_ON &ext_power EP_TOG &kp LSHIFT &trans           &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4  &trans
         &trans  &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP   &kp C_RW   &kp C_FF         &kp F11       &kp F12    &kp LBRC     &kp RBRC  &kp PIPE      &trans
                                 &kp ENTER &kp LSHIFT &mo LOWER     &mo RAISE &kp SPACE &kp DELETE
                         >;
