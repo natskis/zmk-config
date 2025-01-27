@@ -51,14 +51,14 @@
                 };
                 lower_layer {
         // -----------------------------------------------------------------------------------------
-        // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-        // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+        // |  TAB |  1  |  2  |  3  |  LT |  GT |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+        // | BTCLR|  A  |  S  | CTRL|SHIFT|     |   | LFT | DWN |  UP | RGT |     |      |
         // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
         //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-        &trans  &kp ESC  &trans  &kp TAB  &kp KP_LPAR  &kp KP_RPAR      &kp PG_UP &kp PG_DN &kp HOME  &kp END   &kp PSCRN &trans
-        &trans  &trans   &trans  &trans   &trans       &trans           &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp SEMI  &trans
-        &trans  &kp PIPE &trans  &trans   &trans       &trans           &kp MINUS &kp EQUAL &kp BSLH  &kp LBKT  &kp RBKT  &trans
+        &trans  &kp ESC  &trans  &kp TAB   &kp LT     &kp GT      &kp PG_UP &kp PG_DN &kp HOME  &kp END   &kp PSCRN &trans
+        &trans  &trans   &trans  &kp LCTRL &kp LSHIFT &trans      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp SEMI  &trans
+        &trans  &kp PIPE &trans  &trans    &trans     &trans      &kp MINUS &kp EQUAL &kp BSLH  &kp LBKT  &kp RBKT  &trans
                 &kp ENTER &kp LSHIFT &mo LOWER      &mo RAISE &kp SPACE &kp DELETE
                         >;
                 };
