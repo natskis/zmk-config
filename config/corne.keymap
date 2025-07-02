@@ -55,9 +55,19 @@
             key-positions = <4 5>;
         };
 
-        Space_er {
+        Space {
             bindings = <&kp SPACE>;
-            key-positions = <3 4>;
+            key-positions = <3 2>;
+        };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <4 3>;
+        };
+
+        Escape {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
         };
     };
 
