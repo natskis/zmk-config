@@ -12,7 +12,6 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 800  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
-
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
@@ -48,6 +47,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        delete_rt {
+            bindings = <&kp DELETE>;
+            key-positions = <4 5>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -74,10 +82,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp ESC   &trans  &kp TAB    &kp LT      &kp GT       &kp PG_UP  &kp PG_DN  &kp HOME    &kp END    &kp PSCRN  &trans
-&trans  &kp GRAVE    &trans  &trans     &kp LSHIFT  &trans       &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp SEMI   &trans
-&trans  &kp PIPE  &trans  &trans     &trans      &trans       &kp MINUS  &kp EQUAL  &kp BSLH    &kp LBKT   &kp RBKT   &trans
-                          &kp ENTER  &kp LSHIFT  &mo LOWER    &mo RAISE  &kp SPACE  &kp DELETE
+&trans  &kp ESC    &trans  &kp TAB    &kp LT      &kp GT       &kp PG_UP  &kp PG_DN  &kp HOME    &kp END    &kp PSCRN  &trans
+&trans  &kp GRAVE  &trans  &trans     &kp LSHIFT  &trans       &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp SEMI   &trans
+&trans  &kp PIPE   &trans  &trans     &trans      &trans       &kp MINUS  &kp EQUAL  &kp BSLH    &kp LBKT   &kp RBKT   &trans
+                           &kp ENTER  &kp LSHIFT  &mo LOWER    &mo RAISE  &kp SPACE  &kp DELETE
             >;
         };
 
@@ -103,11 +111,11 @@
             // | SHFT |MUTE  |VOL D |VOL U |RWND |NEXT |   | F11 | F12 | "|" |  [  |  ]  |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            bindings = < 
-&trans  &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3    &bt BT_SEL 4     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT &kp CAPSLOCK   &trans
-&trans  &ext_power EP_TOG  &mkp MB4          &mkp LCLK          &mkp MCLK       &mkp RCLK        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &none          &trans
-&trans  &kp C_MUTE         &kp C_VOL_DN      &kp C_VOL_UP       &kp C_STOP      &kp C_PLAY       &kp F11         &kp F12         &kp LBRC      &kp RBRC        &kp PIPE      &trans
-                                             &bt BT_CLR         &kp LSHIFT      &mo LOWER        &mo RAISE       &kp SPACE       &kp DELETE
+            bindings = <
+&trans  &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp CAPSLOCK  &trans
+&trans  &ext_power EP_TOG  &mkp MB4      &mkp LCLK     &mkp MCLK     &mkp RCLK       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none         &trans
+&trans  &kp C_MUTE         &kp C_VOL_DN  &kp C_VOL_UP  &kp C_STOP    &kp C_PLAY      &kp F11         &kp F12         &kp LBRC      &kp RBRC         &kp PIPE      &trans
+                                         &bt BT_CLR    &kp LSHIFT    &mo LOWER       &mo RAISE       &kp SPACE       &kp DELETE
             >;
         };
     };
