@@ -97,7 +97,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp ESC    &trans  &kp TAB    &kp LT      &kp GT       &kp PG_UP  &kp PG_DN  &kp HOME    &kp END    &kp PSCRN  &trans
+&trans  &kp ESC    &trans  &kp TAB    &kp LT      &kp GT       &kp HOME   &kp PG_DN  &kp PG_UP   &kp END    &kp PSCRN  &trans
 &trans  &kp GRAVE  &trans  &trans     &kp LSHIFT  &trans       &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp SEMI   &trans
 &trans  &kp PIPE   &trans  &trans     &trans      &trans       &kp MINUS  &kp EQUAL  &kp BSLH    &kp LBKT   &kp RBKT   &trans
                            &kp ENTER  &kp LSHIFT  &mo LOWER    &mo RAISE  &kp SPACE  &kp DELETE
