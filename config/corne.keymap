@@ -62,7 +62,7 @@
 
         Backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <4 3>;
+            key-positions = <28 29>;
         };
 
         Escape {
