@@ -69,6 +69,36 @@
             bindings = <&kp ESC>;
             key-positions = <1 2>;
         };
+
+        MoveTab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <5 6>;
+        };
+
+        TabBack {
+            bindings = <&kp LS(LC(TAB))>;
+            key-positions = <5 7>;
+        };
+
+        AltTab {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <17 18>;
+        };
+
+        AltShiftTab {
+            bindings = <&kp LS(LA(TAB))>;
+            key-positions = <17 19>;
+        };
+
+        MoveDesktops {
+            bindings = <&kp LG(LEFT_BRACKET)>;
+            key-positions = <29 30>;
+        };
+
+        MoveDesktopBack {
+            bindings = <&kp LG(RIGHT_BRACKET)>;
+            key-positions = <29 31>;
+        };
     };
 
     keymap {
