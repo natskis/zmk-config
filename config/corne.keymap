@@ -42,64 +42,13 @@
         Copy: Copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&kp LA(LS(TAB))>, <&macro_press>;
+
             label = "COPY";
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        delete_rt {
-            bindings = <&kp DELETE>;
-            key-positions = <4 5>;
-        };
-
-        Space {
-            bindings = <&kp SPACE>;
-            key-positions = <3 2>;
-        };
-
-        Backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <28 29>;
-        };
-
-        Escape {
-            bindings = <&kp ESC>;
-            key-positions = <1 2>;
-        };
-
-        MoveTab {
-            bindings = <&kp LC(TAB)>;
-            key-positions = <5 6>;
-        };
-
-        TabBack {
-            bindings = <&kp LS(LC(TAB))>;
-            key-positions = <5 7>;
-        };
-
-        AltTab {
-            bindings = <&kp LA(TAB)>;
-            key-positions = <17 18>;
-        };
-
-        AltShiftTab {
-            bindings = <&kp LS(LA(TAB))>;
-            key-positions = <17 19>;
-        };
-
-        MoveDesktops {
-            bindings = <&kp LG(LEFT_BRACKET)>;
-            key-positions = <29 30>;
-        };
-
-        MoveDesktopBack {
-            bindings = <&kp LG(RIGHT_BRACKET)>;
-            key-positions = <29 31>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -127,10 +76,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp ESC    &trans  &kp TAB    &kp LT      &kp GT       &kp HOME   &kp PG_DN  &kp PG_UP   &kp END    &kp PSCRN  &trans
-&trans  &kp GRAVE  &trans  &trans     &kp LSHIFT  &trans       &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp SEMI   &trans
-&trans  &kp PIPE   &trans  &trans     &trans      &trans       &kp MINUS  &kp EQUAL  &kp BSLH    &kp LBKT   &kp RBKT   &trans
-                           &kp ENTER  &kp LSHIFT  &mo LOWER    &mo RAISE  &kp SPACE  &kp DELETE
+&trans  &kp ESC    &kp SPACE      &kp TAB    &kp LS(LA(TAB))  &kp LA(TAB)    &kp HOME   &kp PG_DN  &kp PG_UP   &kp END    &kp PSCRN  &trans
+&trans  &kp GRAVE  &kp BACKSPACE  &kp DEL    &kp LSHIFT       &trans         &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp SEMI   &trans
+&trans  &trans     &trans         &trans     &kp LC(LS(TAB))  &kp RC(TAB)    &kp MINUS  &kp EQUAL  &kp BSLH    &kp LBKT   &kp RBKT   &trans
+                                  &kp ENTER  &kp LSHIFT       &mo LOWER      &mo RAISE  &kp SPACE  &kp DELETE
             >;
         };
 
