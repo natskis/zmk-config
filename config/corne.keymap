@@ -76,10 +76,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp ESC    &kp SPACE      &kp TAB    &kp LS(LA(TAB))  &kp LA(TAB)    &kp HOME   &kp PG_DN  &kp PG_UP   &kp END    &kp PSCRN  &trans
-&trans  &kp GRAVE  &kp BACKSPACE  &kp DEL    &kp LSHIFT       &trans         &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp SEMI   &trans
-&trans  &trans     &trans         &trans     &kp LC(LS(TAB))  &kp RC(TAB)    &kp MINUS  &kp EQUAL  &kp BSLH    &kp LBKT   &kp RBKT   &trans
-                                  &kp ENTER  &kp LSHIFT       &mo LOWER      &mo RAISE  &kp SPACE  &kp DELETE
+&trans  &kp ESC    &kp SPACE  &kp TAB    &kp LS(LC(TAB))  &kp LC(TAB)    &kp HOME   &kp PG_DN  &kp PG_UP   &kp END    &kp PSCRN  &trans
+&trans  &kp GRAVE  &trans     &trans     &kp LSHIFT       &trans         &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp SEMI   &trans
+&trans  &trans     &trans     &trans     &kp BACKSPACE    &kp DELETE     &kp MINUS  &kp EQUAL  &kp BSLH    &kp LBKT   &kp RBKT   &trans
+                              &kp ENTER  &kp LSHIFT       &mo LOWER      &mo RAISE  &kp SPACE  &kp DELETE
             >;
         };
 
