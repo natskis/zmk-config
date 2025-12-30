@@ -1,16 +1,16 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url: https://github.com/zmkfirmware/zmk
-    # Add this if it's missing
-    - name: petejohanson
-      url: https://github.com/petejohanson
+      url: https://github.com/zmkfirmware
+    - name: nickw
+      url: https://github.com/Nick-W
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    # Add this if you are using nice_view
-    - name: zmk-helpers
-      remote: petejohanson
+    - name: zmk-shield-nice-view
+      remote: nickw
       revision: main
+  self:
+    path: config
