@@ -1,13 +1,16 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+      url: https://github.com/zmkfirmware/zmk
+    # Add this if it's missing
+    - name: petejohanson
+      url: https://github.com/petejohanson
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-  self:
-    path: config
+    # Add this if you are using nice_view
+    - name: zmk-helpers
+      remote: petejohanson
+      revision: main
