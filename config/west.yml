@@ -2,15 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: nickw
-      url-base: https://github.com/Nick-W
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: 0.3
       import: app/west.yml
-    - name: zmk-shield-nice-view
-      remote: nickw
-      revision: main
   self:
     path: config
