@@ -105,10 +105,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp ESC    &kp SPACE  &kp TAB       &kp LS(LC(TAB))  &kp LC(TAB)       &kp HOME   &kp PG_DN  &kp PG_UP   &kp END    &kp PSCRN  &trans
-&trans  &kp GRAVE  &kp TILDE  &hidden_file  &kp LSHIFT       &markdown_link    &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp SEMI   &trans
-&trans  &kp MINUS  &kp PLUS   &kp EQUAL     &kp PLUS         &none             &kp MINUS  &kp EQUAL  &kp BSLH    &kp LBKT   &kp RBKT   &trans
-                              &kp ENTER     &kp LSHIFT       &mo 1             &mo 2      &kp SPACE  &kp DELETE
+&trans  &kp ESC             &kp SPACE  &kp TAB    &kp LS(LC(TAB))  &kp LC(TAB)       &kp HOME   &kp PG_DN  &kp PG_UP   &kp END    &kp PSCRN  &trans
+&trans  &kp GRAVE           &kp TILDE  &kp LCTRL  &kp LSHIFT       &markdown_link    &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp SEMI   &trans
+&trans  &hm LEFT_GUI MINUS  &kp PLUS   &kp EQUAL  &kp UNDERSCORE   &hidden_file      &kp MINUS  &kp EQUAL  &kp BSLH    &kp LBKT   &kp RBKT   &trans
+                                       &kp ENTER  &kp LSHIFT       &mo 1             &mo 2      &kp SPACE  &kp DELETE
             >;
         };
 
