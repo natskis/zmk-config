@@ -46,6 +46,13 @@
 
             label = "COPY";
         };
+
+        hidden_file: hidden_file {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp SLASH &kp DOT>;
+            label = "HIDDEN_FILE";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -61,29 +68,14 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none   &hm TILDE Q  &hm SPACE W  &kp E        &kp R         &hm ESC T    &kp Y      &kp U         &kp I        &kp O       &kp P     &trans
-&trans  &hm LCTRL A  &hm LALT S   &hm LCTRL D  &hm LSHIFT F  &kp G        &kp H      &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &kp SQT   &trans
-&trans  &hm LGUI Z   &hm LALT X   &kp C        &kp V         &kp B        &kp N      &kp M         &kp COMMA    &kp DOT     &kp FSLH  &trans
-                                  &kp ENTER    &kp LSHIFT    &mo LOWER    &mo RAISE  &kp SPACE     &kp BSPC
+&none   &hm TILDE Q  &hm SPACE W  &kp E        &kp R         &hm ESC T    &kp Y  &kp U         &kp I        &kp O       &kp P     &trans
+&trans  &hm LCTRL A  &hm LALT S   &hm LCTRL D  &hm LSHIFT F  &kp G        &kp H  &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &kp SQT   &trans
+&trans  &hm LGUI Z   &hm LALT X   &kp C        &kp V         &kp B        &kp N  &kp M         &kp COMMA    &kp DOT     &kp FSLH  &trans
+                                  &kp ENTER    &kp LSHIFT    &mo 1        &mo 2  &kp SPACE     &kp BSPC
             >;
         };
 
-        lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  LT |  GT |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR|  A  |  S  | CTRL|SHIFT|     |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans  &kp ESC    &kp SPACE  &kp TAB    &kp LS(LC(TAB))  &kp LC(TAB)    &kp HOME   &kp PG_DN  &kp PG_UP   &kp END    &kp PSCRN  &trans
-&trans  &kp GRAVE  &trans     &trans     &kp LSHIFT       &trans         &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp SEMI   &trans
-&trans  &trans     &trans     &trans     &kp BACKSPACE    &kp DELETE     &kp MINUS  &kp EQUAL  &kp BSLH    &kp LBKT   &kp RBKT   &trans
-                              &kp ENTER  &kp LSHIFT       &mo LOWER      &mo RAISE  &kp SPACE  &kp DELETE
-            >;
-        };
-
-        raise_layer {
+        numbers_symbols {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
             // | CTRL |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
@@ -94,11 +86,26 @@
 &trans  &kp N1    &kp N2  &kp N3     &kp N4      &kp N5       &kp N6     &kp N7     &kp N8      &kp N9    &kp N0    &trans
 &trans  &kp EXCL  &kp AT  &kp HASH   &kp DLLR    &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RPAR  &trans
 &trans  &kp F1    &kp F2  &kp F3     &kp F4      &kp F5       &kp F6     &kp F7     &kp F8      &kp F9    &kp F10   &trans
-                          &kp ENTER  &kp LSHIFT  &mo LOWER    &mo RAISE  &kp SPACE  &kp DELETE
+                          &kp ENTER  &kp LSHIFT  &mo 1        &mo 2      &kp SPACE  &kp DELETE
             >;
         };
 
-        symbol_layer {
+        navigation {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  LT |  GT |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+            // | BTCLR|  A  |  S  | CTRL|SHIFT|     |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&trans  &kp ESC    &kp SPACE  &kp TAB       &kp LS(LC(TAB))  &kp LC(TAB)    &kp HOME   &kp PG_DN  &kp PG_UP   &kp END    &kp PSCRN  &trans
+&trans  &kp GRAVE  &kp TILDE  &hidden_file  &kp LSHIFT       &trans         &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp SEMI   &trans
+&trans  &trans     &trans     &trans        &kp BACKSPACE    &kp DELETE     &kp MINUS  &kp EQUAL  &kp BSLH    &kp LBKT   &kp RBKT   &trans
+                              &kp ENTER     &kp LSHIFT       &mo 1          &mo 2      &kp SPACE  &kp DELETE
+            >;
+        };
+
+        bluetooth_and_mouse {
             // -----------------------------------------------------------------------------------------
             // |  TAB | `    | REW  | FF   |STOP |PLAY |   |     |     |     |     |     | BSPC |
             // | CTRL |EP_TOG|EP_ON |EP_OFF|     |BTCLR|   | BT1 | BT2 | BT3 | BT4 | BT5 |      |
@@ -106,10 +113,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp CAPSLOCK  &trans
-&trans  &ext_power EP_TOG  &mkp MB4      &mkp LCLK     &mkp MCLK     &mkp RCLK       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none         &trans
-&trans  &kp C_MUTE         &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY    &kp C_STOP      &kp C_PREV      &kp C_NEXT      &none         &kp F11          &kp F12       &trans
-                                         &bt BT_CLR    &kp LSHIFT    &mo LOWER       &mo RAISE       &kp SPACE       &kp DELETE
+&trans  &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &kp CAPSLOCK  &trans
+&trans  &ext_power EP_TOG  &mkp MB4      &mkp LCLK     &mkp MCLK     &mkp RCLK       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP   &mmv MOVE_RIGHT  &none         &trans
+&trans  &kp C_MUTE         &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY    &kp C_STOP      &kp C_PREV      &kp C_NEXT      &kp BACKSLASH  &kp F11          &kp F12       &trans
+                                         &bt BT_CLR    &kp LSHIFT    &mo 1           &mo 2           &kp SPACE       &kp DELETE
             >;
         };
     };
