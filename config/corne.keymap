@@ -92,7 +92,7 @@
             bindings = <
 &trans  &kp N1           &kp N2           &kp N3          &kp N4               &kp N5         &kp N6     &kp N7     &kp N8         &kp N9            &kp N0             &trans
 &trans  &kp EXCL         &hm LEFT_ALT AT  &hm LCTRL HASH  &hm LEFT_SHIFT DLLR  &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK      &kp LPAR          &kp RPAR           &trans
-&trans  &hm LGUI ESCAPE  &kp LA(LS(TAB))  &kp LA(TAB)     &kp LC(LS(TAB))      &kp LC(TAB)    &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &hm LGUI ESCAPE  &kp LA(LS(TAB))  &kp LA(TAB)     &kp TAB              &kp LS(TAB)    &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
                                           &kp ENTER       &kp LSHIFT           &mo 1          &mo 2      &kp SPACE  &kp DELETE
             >;
         };
